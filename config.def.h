@@ -7,16 +7,16 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Go Mono Nerd Font:size=10" };
 static const char dmenufont[]       = "Go Mono Nerd Font:size=10";
-static const char col_gray1[]       = "#333333";
-static const char col_gray2[]       = "#ABABAB";
-static const char col_gray3[]       = "#DFDFDF";
-static const char col_gray4[]       = "#778899";
-static const char col_cyan[]        = "#EFEFEF";
-static const char col_border[]        = "#A3BE8C";
+static const char col_normbg[]       = "#333333"; /*norm bg color*/
+static const char col_normborder[]       = "#ABABAB"; /*norm border color*/
+static const char col_normfg[]       = "#DFDFDF"; /*norm fg color*/
+static const char col_selfg[]       = "#778899"; /*sel fg color*/
+static const char col_selbg[]        = "#EFEFEF"; /*sel bg color*/
+static const char col_selborder[]        = "#A3BE8C"; /*sel border color*/
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_cyan, col_gray1, col_border },
-	[SchemeSel]  = { col_cyan, col_gray1,  col_border },
+	[SchemeNorm] = { col_selbg, col_normbg, col_normborder },
+	[SchemeSel]  = { col_selbg, col_normbg,  col_selborder },
 };
 
 /* tagging */
@@ -59,7 +59,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_gray4, "-sf", col_cyan, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_normbg, "-nf", col_normfg, "-sb", col_selfg, "-sf", col_selbg, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[]  = { "brave", NULL };
 static const char *screenshotcmd[]  = { "alacritty", "-e" "flameshot", "gui", NULL };
