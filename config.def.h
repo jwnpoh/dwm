@@ -63,13 +63,17 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[]  = { "brave", NULL };
 static const char *screenshotcmd[]  = { "flameshot", "gui", NULL };
+static const char *zoomcmd[]  = { "zoom", NULL };
+static const char *pavucmd[]  = { "pavucontrol", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
+	{ ControlMask|Mod1Mask,         XK_b,      spawn,          {.v = browsercmd } },
+	{ ControlMask|Mod1Mask,         XK_z,      spawn,          {.v = zoomcmd } },
 	{ ControlMask|Mod1Mask,         XK_s,      spawn,          {.v = screenshotcmd } },
+	{ ControlMask|Mod1Mask,         XK_m,      spawn,          {.v = pavucmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
