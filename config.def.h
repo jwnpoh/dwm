@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
@@ -12,13 +12,13 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Go Mono Nerd Font:size=10" };
 static const char dmenufont[]       = "Go Mono Nerd Font:size=10";
-static const char col_normbg[]       = "#333333"; /*norm bg color*/
+static const char col_normbg[]       = "#323d43"; /*norm bg color*/
 static const char col_normborder[]       = "#ABABAB"; /*norm border color*/
-static const char col_normfg[]       = "#DFDFDF"; /*norm fg color*/
-static const char col_selfg[]       = "#778899"; /*sel fg color*/
-static const char col_selbg[]        = "#EFEFEF"; /*sel bg color*/
-static const char col_selborder[]        = "#A3BE8C"; /*sel border color*/
-static const unsigned int baralpha = 0x88;
+static const char col_normfg[]       = "#d8caac"; /*norm fg color*/
+static const char col_selfg[]       = "#323d43"; /*sel fg color*/
+static const char col_selbg[]        = "#d8caac"; /*sel bg color*/
+static const char col_selborder[]        = "#a7c080"; /*sel border color*/
+static const unsigned int baralpha = 0xDD;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -71,7 +71,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_normbg, "-nf", col_normfg, "-sb", col_selfg, "-sf", col_selbg, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_normbg, "-nf", col_normfg, "-sb", col_selbg, "-sf", col_selfg, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[]  = { "brave", NULL };
 static const char *screenshotcmd[]  = { "flameshot", "gui", NULL };
