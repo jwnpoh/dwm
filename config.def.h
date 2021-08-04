@@ -1,11 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-<<<<<<< HEAD
 static const char *fonts[]          = { "Go Mono Nerd Font:size=10" };
 static const char dmenufont[]       = "Go Mono Nerd Font:size=10";
 static const char col_normbg[]       = "#333333"; /*norm bg color*/
@@ -14,10 +13,8 @@ static const char col_normfg[]       = "#DFDFDF"; /*norm fg color*/
 static const char col_selfg[]       = "#778899"; /*sel fg color*/
 static const char col_selbg[]        = "#EFEFEF"; /*sel bg color*/
 static const char col_selborder[]        = "#A3BE8C"; /*sel border color*/
-=======
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0x88;
 static const unsigned int borderalpha = OPAQUE;
->>>>>>> alpha-patch
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_selbg, col_normbg, col_normborder },
